@@ -80,7 +80,7 @@ def solve3sum(givennums,target):
 # nums[a] + nums[b] + nums[c] + nums[d] == target
 # You may return the answer in any order.
 
-# not a good solution 
+# not a good solution (my solution )
 
 def fourSum(nums, target):
         nums.sort()
@@ -99,7 +99,6 @@ def fourSum(nums, target):
                     if total == finalt:
                         ans.append([nums[i], nums[j], nums[first], nums[last]])
                         first += 1
-                        last -= 1
 
                     elif total > finalt:
                         last -= 1
@@ -108,6 +107,95 @@ def fourSum(nums, target):
                         first += 1
                         
 
-        return ans   
+        return ans  
+    
+    
+    
+    
+    
+    
+# my approch in better way 
+def fourSum(nums, target):
+    nums.sort()
+    n = len(nums)
+    ans = []
+
+    for i in range(n - 3):
+
+        # skip duplicate i
+        if i > 0 and nums[i] == nums[i-1]:
+            continue
+
+        # pruning
+        if nums[i] + nums[i+1] + nums[i+2] + nums[i+3] > target:
+            break
+
+        if nums[i] + nums[n-1] + nums[n-2] + nums[n-3] < target:
+            continue
+
+        for j in range(i + 1, n - 2):
+
+            # skip duplicate j
+            if j > i + 1 and nums[j] == nums[j-1]:
+                continue
+
+            first = j + 1
+            last = n - 1
+
+            while first < last:
+                total = nums[i] + nums[j] + nums[first] + nums[last]
+
+                if total == target:
+                    ans.append([nums[i], nums[j], nums[first], nums[last]])
+
+                    # skip duplicate first
+                    while first < last and nums[first] == nums[first+1]:
+                        first += 1
+
+                    # skip duplicate last
+                    while first < last and nums[last] == nums[last-1]:
+                        last -= 1
+
+                    first += 1
+                    last -= 1
+
+                elif total < target:
+                    first += 1
+
+                else:
+                    last -= 1
+
+    return ans    
+    
+  
+  
+# neetcode general k sum approch     
+def four_sum(nums,target):
+    nums.sort()
+    res,quad = [],[]
+    
+    def ksum(k,start,target):
+        if k!=2:
+            for i in range(start,len(nums)-k+1):
+                if i>start and nums[i]==nums[i-1]:
+                    continue
+                quad.append(nums[i]) 
+                ksum(k-1,i+1,target-nums[i])
+                quad.pop()
+            return 
+        #base case , two sum 2
+        l,r = start , len(nums)-1
+        while l<r:
+            if nums[l]+nums[r]<target:
+                l+=1
+            elif nums[l] +nums[r]>target:
+                r-=1
+            else:
+                res.append(quad+nums[l],nums[r])
+                l+=1
+                while l<r and nums[l]==nums[l-1]:
+                    l+=1
+    ksum(4,0,target)   
+    return res                    
 
  
