@@ -42,7 +42,7 @@ print(solve2sum(givennums,7))
 # that is sum of 2 element = target - selected element --- o(n**2)
 
 
-def solve2sum(givennums,target):
+def solve3sum(givennums,target):
     temp = givennums.copy()
     givennums.sort()
     for k in range(len(givennums)):
@@ -68,3 +68,46 @@ def solve2sum(givennums,target):
                 start+=1    
             
     return -1  
+
+
+
+# 4- sum 
+# 18. 4Sums
+# Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:
+
+# 0 <= a, b, c, d < n
+# a, b, c, and d are distinct.
+# nums[a] + nums[b] + nums[c] + nums[d] == target
+# You may return the answer in any order.
+
+# not a good solution 
+
+def fourSum(nums, target):
+        nums.sort()
+        n = len(nums)
+        ans = []
+
+        for i in range(n):
+            for j in range(i+1, n):
+                finalt = target - nums[i] - nums[j]
+
+                first, last = j+1, n-1
+
+                while first < last:
+                    total = nums[first] + nums[last]
+
+                    if total == finalt:
+                        ans.append([nums[i], nums[j], nums[first], nums[last]])
+                        first += 1
+                        last -= 1
+
+                    elif total > finalt:
+                        last -= 1
+
+                    else:
+                        first += 1
+                        
+
+        return ans   
+
+ 
