@@ -28,9 +28,9 @@ def solve2sum(givennums,target):
         
     return -1  
 
-givennums = [1,5,2,10,7]
+# givennums = [1,5,2,10,7]
 
-print(solve2sum(givennums,7))
+# print(solve2sum(givennums,7))
 
 
 
@@ -87,18 +87,27 @@ def fourSum(nums, target):
         n = len(nums)
         ans = []
 
-        for i in range(n):
-            for j in range(i+1, n):
+        for i in range(n-3):
+            while i>0 and nums[i]==nums[i+1]:
+                continue
+            for j in range(i+1, n-3):
+                while j>i+1 and nums[j]==nums[j+1]:
+                    continue
                 finalt = target - nums[i] - nums[j]
 
-                first, last = j+1, n-1
+                first, last = j+1, n
 
                 while first < last:
                     total = nums[first] + nums[last]
 
                     if total == finalt:
                         ans.append([nums[i], nums[j], nums[first], nums[last]])
-                        first += 1
+                        while first<last and nums[first]==nums[first+1]:
+                            first+=1
+                        while first<last and nums[last]==nums[last-1]:
+                            last-=1
+                        first+=1
+                        last-=1        
 
                     elif total > finalt:
                         last -= 1
@@ -110,62 +119,6 @@ def fourSum(nums, target):
         return ans  
     
     
-    
-    
-    
-    
-# my approch in better way 
-def fourSum(nums, target):
-    nums.sort()
-    n = len(nums)
-    ans = []
-
-    for i in range(n - 3):
-
-        # skip duplicate i
-        if i > 0 and nums[i] == nums[i-1]:
-            continue
-
-        # pruning
-        if nums[i] + nums[i+1] + nums[i+2] + nums[i+3] > target:
-            break
-
-        if nums[i] + nums[n-1] + nums[n-2] + nums[n-3] < target:
-            continue
-
-        for j in range(i + 1, n - 2):
-
-            # skip duplicate j
-            if j > i + 1 and nums[j] == nums[j-1]:
-                continue
-
-            first = j + 1
-            last = n - 1
-
-            while first < last:
-                total = nums[i] + nums[j] + nums[first] + nums[last]
-
-                if total == target:
-                    ans.append([nums[i], nums[j], nums[first], nums[last]])
-
-                    # skip duplicate first
-                    while first < last and nums[first] == nums[first+1]:
-                        first += 1
-
-                    # skip duplicate last
-                    while first < last and nums[last] == nums[last-1]:
-                        last -= 1
-
-                    first += 1
-                    last -= 1
-
-                elif total < target:
-                    first += 1
-
-                else:
-                    last -= 1
-
-    return ans    
     
   
   
@@ -180,8 +133,14 @@ def four_sum(nums,target):
                 if i>start and nums[i]==nums[i-1]:
                     continue
                 quad.append(nums[i]) 
+                print(quad)
+                print(f'{nums[i]} is appended')
+                print("function call inside function")
                 ksum(k-1,i+1,target-nums[i])
-                quad.pop()
+                print('----------------------------------------------------')
+                a=quad.pop()
+                print(f'{a} is poped')
+                print("#####################################################")
             return 
         #base case , two sum 2
         l,r = start , len(nums)-1
@@ -191,11 +150,16 @@ def four_sum(nums,target):
             elif nums[l] +nums[r]>target:
                 r-=1
             else:
-                res.append(quad+nums[l],nums[r])
+                res.append(quad+[nums[l],nums[r]])
+                print(res)
                 l+=1
                 while l<r and nums[l]==nums[l-1]:
                     l+=1
-    ksum(4,0,target)   
-    return res                    
+    ksum(4,0,target) 
+    print("final result")  
+    return res   
+
+nums = [1,0,-1,0,-2,2]
+print(four_sum(nums,0))                
 
  
