@@ -15,5 +15,8 @@ int main() {
     //M1
     //cin>>a;//this method has one problem it only takes elemnt till white space donst appear 
     //M2 
-    //getline(cin , variable name );//this metod takes full paragraph as input including white space  
+    //getline(cin , variable name );//this metod takes full paragraph as input including white space
+    
+    //taking multiple input seperated by white space
+    //cin >> s >> n;   first input will be stored in s and then next will be stored in n
 }
