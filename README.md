@@ -1,15 +1,18 @@
-# 📚 Learning DSA - Data Structures & Algorithms Journey
+# 📚 Learning DSA (Data Structures & Algorithms)
+
+> A comprehensive, actively-developing repository documenting my journey through **Data Structures and Algorithms** with implementations in **Python** (76.6%) and **C++** (23.4%).
 
 <div align="center">
 
-![DSA](https://img.shields.io/badge/Topic-DSA-blue?style=for-the-badge)
-![Python](https://img.shields.io/badge/Language-Python-green?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Under%20Development-orange?style=flat-square)
+![Python](https://img.shields.io/badge/Python-76.6%25-3776ab?style=flat-square&logo=python)
+![C++](https://img.shields.io/badge/C%2B%2B-23.4%25-00599C?style=flat-square&logo=c%2B%2B)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-June%202026-blue?style=flat-square)
 
-**Master Data Structures and Algorithms with hands-on coding examples and LeetCode problems**
+**Master DSA with hands-on implementations, multiple languages, and real LeetCode problems**
 
-[🎯 Quick Start](#quick-start) • [📖 Topics](#topics) • [💡 Resources](#resources) • [🤝 Contributing](#contributing)
+[🎯 Quick Start](#-quick-start) • [📖 Structure](#-repository-structure) • [💻 Languages](#-language-implementations) • [🚀 Getting Started](#-getting-started)
 
 </div>
 
@@ -17,353 +20,399 @@
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Quick Start](#quick-start)
-- [Folder Structure](#folder-structure)
-- [Topics](#topics)
-  - [Arrays](#arrays)
-  - [Strings](#strings)
-- [Learning Resources](#learning-resources)
-- [LeetCode Problem Index](#leetcode-problem-index)
-- [Contributing](#contributing)
+- [About This Project](#-about-this-project)
+- [Quick Start](#-quick-start)
+- [Repository Structure](#-repository-structure)
+- [Language Implementations](#-language-implementations)
+- [Getting Started](#-getting-started)
+- [Recommended Learning Path](#-recommended-learning-path)
+- [Development Status](#-development-status)
+- [Contributing](#-contributing)
+- [Learning Resources](#-learning-resources)
 
 ---
 
-## 🎯 Overview
+## 🎯 About This Project
 
-This repository is a comprehensive collection of **Data Structures and Algorithms** implementations and solutions. It's designed for:
+This repository is my **active learning journey** through Data Structures and Algorithms. It's designed as a:
 
-- 👨‍💻 **Beginners** learning fundamental algorithms
+✅ **Comprehensive Reference** - Well-organized implementations with explanations  
+✅ **Dual-Language Practice** - Python for rapid development, C++ for performance  
+✅ **Interview Preparation** - Real LeetCode and interview problems  
+✅ **Learning Playground** - Experimenting with different approaches and optimizations  
+⚠️ **Work in Progress** - Expect frequent updates, refactoring, and new content
+
+### Perfect For:
+- 👨‍💻 **Beginners** learning fundamental DSA concepts
 - 🎓 **Students** preparing for coding interviews
-- 🚀 **Developers** improving problem-solving skills
-- 📝 **Competitive Programmers** sharpening their algorithmic thinking
-
-### Learning Philosophy
-- **Theory + Practice**: Understand the concept, then code it
-- **Multiple Approaches**: Learn different ways to solve problems
-- **Progressive Difficulty**: Start with fundamentals, advance to complex problems
-- **Real Interview Problems**: LeetCode problems from actual interviews
+- 🚀 **Developers** improving algorithmic thinking
+- 📝 **Competitive Programmers** sharpening skills
+- 🔄 **Anyone** wanting to learn in multiple languages
 
 ---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
+
+**For Python:**
 ```bash
-- Python 3.7+
-- Basic understanding of programming concepts
+Python 3.7 or higher
 ```
 
-### How to Use
+**For C++:**
+```bash
+GCC, Clang, or MSVC compiler
+C++11 standard or higher
+```
+
+### Clone & Explore
+
 ```bash
 # Clone the repository
-git clone <this-repo>
+git clone https://github.com/Akshay010706/learningDSA.git
+cd learningDSA
 
-# Navigate to a topic
-cd Array/leetcodeimp/Easy
+# Run a Python example
+cd Python/Array/StartingAlgorithm
+python3 1D_kadaneAlgo.py
 
-# Run any solution
-python twosum.py
+# Compile and run a C++ example
+cd C++
+g++ -std=c++11 -o solution solution.cpp
+./solution
 ```
-
-### Recommended Learning Path
-1. **Start Here**: `Array/StartingAlgorithm/` - Master fundamental algorithms
-2. **Learn Patterns**: `Array/leetcode8pattern/` - Understand common coding patterns
-3. **Apply Knowledge**: `Array/leetcodeimp/` - Solve real LeetCode problems
-4. **Practice Strings**: `Strings/` - Master string manipulation
 
 ---
 
-## 📁 Folder Structure
+## 📁 Repository Structure
 
 ```
 learningDSA/
 │
-├── 📊 Array/                           # Array data structure problems
-│   ├── StartingAlgorithm/              # Fundamental algorithms
-│   │   ├── 1D_kadaneAlgo.py            # Maximum subarray sum (1D)
-│   │   ├── 2D_Kadanesalgo.py           # Maximum subarray sum (2D)
-│   │   ├── 2sumand3sum.py              # Two sum and three sum problems
-│   │   ├── DNFalgo.py                  # Dutch National Flag algorithm
-│   │   ├── jugglingalogrithm.py        # Array rotation technique
-│   │   └── mooresvotingalgo.py         # Majority element algorithm
+├── 📂 Python/                              # Python implementations (76.6%)
 │   │
-│   ├── leetcode8pattern/               # Common coding patterns
-│   │   └── 1_twopointer.py             # Two-pointer technique
+│   ├── 📂 Array/                          # Array data structures & algorithms
+│   │   │
+│   │   ├── 📂 StartingAlgorithm/         # Fundamental algorithms
+│   │   │   ├── 1D_kadaneAlgo.py          # Kadane's Algorithm (1D)
+│   │   │   ├── 2D_Kadanesalgo.py         # Kadane's Algorithm (2D)
+│   │   │   ├── 2sumand3sum.py            # Two Sum & Three Sum Problems
+│   │   │   ├── DNFalgo.py                # Dutch National Flag Algorithm
+│   │   │   ├── jugglingalogrithm.py      # Juggling Algorithm (Array Rotation)
+│   │   │   └── mooresvotingalgo.py       # Moore's Voting Algorithm
+│   │   │
+│   │   ├── 📂 leetcode8pattern/          # Common coding patterns
+│   │   │   └── 1_twopointer.py           # Two-pointer technique
+│   │   │
+│   │   ├── 📂 searchingalgorithm/        # Searching techniques
+│   │   │   ├── binarysearch.py           # Binary Search
+│   │   │   └── linearsearch.py           # Linear Search
+│   │   │
+│   │   └── 📂 leetcodeimp/               # LeetCode problems by difficulty
+│   │       │
+│   │       ├── 📂 Easy/                  # Easy level problems
+│   │       │   ├── twosum.py             # Two Sum (LeetCode #1)
+│   │       │   ├── Contains_Duplicate.py # Contains Duplicate (LeetCode #217)
+│   │       │   ├── Maximum_Subarray.py   # Maximum Subarray (LeetCode #53)
+│   │       │   └── best_timetobuy_stock.py # Best Time to Buy and Sell Stock
+│   │       │
+│   │       └── 📂 Medium/                # Medium level problems
+│   │           └── Product_of_Array_Except_Self.py # Product of Array Except Self
 │   │
-│   ├── leetcodeimp/                    # LeetCode problems by difficulty
-│   │   ├── Easy/                       # Easy level problems
-│   │   │   ├── twosum.py               # Two Sum
-│   │   │   ├── Contains_Duplicate.py   # Contains Duplicate
-│   │   │   ├── Maximum_Subarray.py     # Maximum Subarray
-│   │   │   └── best_timetobuy_stock.py # Best Time to Buy and Sell Stock
-│   │   ├── Medium/                     # Medium level problems
-│   │   │   └── Product_of_Array_Except_Self.py
-│   │   └── hard/                       # Hard level problems
-│   │
-│   └── Sorthingalgorithm/              # Sorting techniques (in progress)
+│   └── 📂 Strings/                        # String manipulation (coming soon)
 │
-├── 🔤 Strings/                         # String manipulation problems
-│   ├── leetcodepattern/                # String patterns and techniques
-│   │   ├── KMP_Alogo.py                # KMP pattern matching algorithm
-│   │   ├── Valid_Anagram.py            # Anagram detection
-│   │   └── KMP_Algo.jpeg               # KMP algorithm visualization
-│   │
-│   └── leetcodeimp/                    # LeetCode string problems (in progress)
+├── 📂 C++/                                 # C++ implementations (23.4%)
+│       (Structure to be populated)
 │
-└── README.md                           # This file!
+└── README.md                              # This file
 ```
 
 ---
 
-## 📖 Topics
+## 💻 Language Implementations
 
-### 📊 Arrays
+### Python (76.6%) ✅ Active
 
-Arrays are fundamental data structures used in almost every coding problem. Master the following concepts:
+**Current Implementation:**
+- ✅ Array algorithms and patterns
+- ✅ Searching algorithms (Linear & Binary Search)
+- ✅ LeetCode problems (Easy & Medium)
+- 📝 String implementations (Coming soon)
 
-#### 🎓 Starting Algorithms
+**Why Python for DSA?**
+- ✨ Clean, readable syntax - focus on algorithms, not syntax
+- 🚀 Rapid development and testing
+- 📚 Excellent for prototyping and learning
+- 🧪 Easy debugging and visualization
 
-| Algorithm | File | Complexity | Use Case |
-|-----------|------|-----------|----------|
-| **Kadane's Algorithm (1D)** | [1D_kadaneAlgo.py](Array/StartingAlgorithm/1D_kadaneAlgo.py) | O(n) | Maximum subarray sum |
-| **Kadane's Algorithm (2D)** | [2D_Kadanesalgo.py](Array/StartingAlgorithm/2D_Kadanesalgo.py) | O(n²) | Max sum in 2D matrix |
-| **Two Sum & Three Sum** | [2sumand3sum.py](Array/StartingAlgorithm/2sumand3sum.py) | O(n²) | Finding target sum pairs |
-| **Dutch National Flag** | [DNFalgo.py](Array/StartingAlgorithm/DNFalgo.py) | O(n) | Partitioning (0s, 1s, 2s) |
-| **Juggling Algorithm** | [jugglingalogrithm.py](Array/StartingAlgorithm/jugglingalogrithm.py) | O(n) | Array rotation |
-| **Moore's Voting** | [mooresvotingalgo.py](Array/StartingAlgorithm/mooresvotingalgo.py) | O(n) | Finding majority element |
-
-#### 🎯 Common Patterns
-
-| Pattern | File | Description |
-|---------|------|-------------|
-| **Two Pointer** | [1_twopointer.py](Array/leetcode8pattern/1_twopointer.py) | Move two pointers from ends/start |
-
-#### 💪 LeetCode Problems
-
-**Easy Level** - Build your confidence!
-- [❓ Two Sum](Array/leetcodeimp/Easy/twosum.py) - Find two numbers that add up to target
-- [✓ Contains Duplicate](Array/leetcodeimp/Easy/Contains_Duplicate.py) - Check for duplicate elements
-- [📈 Maximum Subarray](Array/leetcodeimp/Easy/Maximum_Subarray.py) - Find contiguous subarray with max sum
-- [💰 Best Time to Buy and Sell Stock](Array/leetcodeimp/Easy/best_timetobuy_stock.py) - Maximize profit from one transaction
-
-**Medium Level** - Level up your skills!
-- [🎁 Product of Array Except Self](Array/leetcodeimp/Medium/Product_of_Array_Except_Self.py) - Calculate product without division
-
-**Hard Level** - Ultimate challenge!
-- (Coming Soon... 🚀)
-
----
-
-### 🔤 Strings
-
-Master string manipulation and pattern matching algorithms.
-
-#### 🎓 String Patterns & Algorithms
-
-| Algorithm | File | Complexity | Concept |
-|-----------|------|-----------|---------|
-| **KMP (Knuth-Morris-Pratt)** | [KMP_Alogo.py](Strings/leetcodepattern/KMP_Alogo.py) | O(n+m) | Efficient pattern matching |
-| **Valid Anagram** | [Valid_Anagram.py](Strings/leetcodepattern/Valid_Anagram.py) | O(n) | Character frequency matching |
-
-**Visual Guides:**
-- 📊 [KMP Algorithm Visualization](Strings/leetcodepattern/KMP_Algo.jpeg) - Visual explanation of KMP
-
----
-
-## 📚 Learning Resources
-
-### How to Learn Effectively
-
-```
-1️⃣  READ the algorithm explanation
-2️⃣  UNDERSTAND the logic and approach
-3️⃣  CODE it yourself first (without copying)
-4️⃣  TRACE through examples
-5️⃣  COMPARE with multiple approaches
-6️⃣  PRACTICE on LeetCode
-7️⃣  OPTIMIZE for time & space complexity
+**Example (Kadane's Algorithm):**
+```python
+# Python/Array/StartingAlgorithm/1D_kadaneAlgo.py
+def maxSubArraySum(arr):
+    """Find maximum sum of contiguous subarray - O(n) solution"""
+    max_so_far = arr[0]
+    max_ending_here = arr[0]
+    
+    for i in range(1, len(arr)):
+        max_ending_here = max(arr[i], max_ending_here + arr[i])
+        max_so_far = max(max_so_far, max_ending_here)
+    
+    return max_so_far
 ```
 
-### Algorithm Complexity Reference
+### C++ (23.4%) 📋 Planned
 
-| Complexity | Time | Space | Real World |
-|-----------|------|-------|-----------|
-| O(1) | Instant | Instant | Hash lookup |
-| O(log n) | Binary Search | Efficient | Searching sorted data |
-| O(n) | Linear | Proportional | Single loop |
-| O(n log n) | Sorting | Efficient | Merge sort, Quick sort |
-| O(n²) | Slow | Quadratic | Bubble sort, Nested loops |
-| O(2ⁿ) | Very Slow | Exponential | Recursive algorithms |
+**Why C++ for DSA?**
+- ⚡ Performance-critical implementations
+- 🎯 Competitive programming requirements
+- 💾 Memory management & optimization
+- 🏆 Many interview companies use C++
 
-### Key Concepts to Master
-
-- ✅ **Time & Space Complexity** - Analyze algorithm efficiency
-- ✅ **Two Pointer Technique** - Solve array problems optimally
-- ✅ **Sliding Window** - Process contiguous subarrays
-- ✅ **Prefix/Suffix** - Precompute values for optimization
-- ✅ **Dynamic Programming** - Build solutions bottom-up
-- ✅ **Pattern Matching** - String algorithms like KMP, Rabin-Karp
+**Status:** Folder structure created, implementations coming soon!
 
 ---
 
-## 🔍 LeetCode Problem Index
+## 🎓 Getting Started
 
-### By Difficulty
+### Recommended Learning Path
 
-<details>
-<summary><b>Easy (4 problems)</b> - Start here! 🟢</summary>
+**Phase 1: Foundation Algorithms** 
+Start with `Python/Array/StartingAlgorithm/` to master the basics:
+1. [1D Kadane's Algorithm](Python/Array/StartingAlgorithm/1D_kadaneAlgo.py) - Maximum subarray sum
+2. [2D Kadane's Algorithm](Python/Array/StartingAlgorithm/2D_Kadanesalgo.py) - 2D matrix maximum
+3. [2Sum & 3Sum](Python/Array/StartingAlgorithm/2sumand3sum.py) - Finding target pairs
+4. [Dutch National Flag](Python/Array/StartingAlgorithm/DNFalgo.py) - Partitioning arrays
+5. [Juggling Algorithm](Python/Array/StartingAlgorithm/jugglingalogrithm.py) - Array rotation
+6. [Moore's Voting](Python/Array/StartingAlgorithm/mooresvotingalgo.py) - Finding majority element
 
-1. Two Sum
-2. Contains Duplicate
-3. Maximum Subarray
-4. Best Time to Buy and Sell Stock
+**Phase 2: Search Techniques**
+Master searching in `Python/Array/searchingalgorithm/`:
+1. [Linear Search](Python/Array/searchingalgorithm/linearsearch.py)
+2. [Binary Search](Python/Array/searchingalgorithm/binarysearch.py)
 
-</details>
+**Phase 3: Common Patterns**
+Learn coding patterns in `Python/Array/leetcode8pattern/`:
+1. [Two Pointer Technique](Python/Array/leetcode8pattern/1_twopointer.py)
 
-<details>
-<summary><b>Medium (1 problem)</b> - Level up! 🟡</summary>
+**Phase 4: LeetCode Practice**
+Solve real interview problems in `Python/Array/leetcodeimp/`:
 
-1. Product of Array Except Self
+**Easy Level:**
+- [Two Sum](Python/Array/leetcodeimp/Easy/twosum.py)
+- [Contains Duplicate](Python/Array/leetcodeimp/Easy/Contains_Duplicate.py)
+- [Maximum Subarray](Python/Array/leetcodeimp/Easy/Maximum_Subarray.py)
+- [Best Time to Buy and Sell Stock](Python/Array/leetcodeimp/Easy/best_timetobuy_stock.py)
 
-</details>
+**Medium Level:**
+- [Product of Array Except Self](Python/Array/leetcodeimp/Medium/Product_of_Array_Except_Self.py)
 
-<details>
-<summary><b>Hard (TBD)</b> - Master challenge! 🔴</summary>
+### Running Examples
 
-Coming soon...
+**Python:**
+```bash
+# Navigate to the specific folder
+cd Python/Array/StartingAlgorithm
 
-</details>
+# Run any Python file
+python3 1D_kadaneAlgo.py
+```
 
-### By Topic
+**C++:**
+```bash
+# Navigate to C++ folder
+cd C++
 
-| Topic | Easy | Medium | Hard |
-|-------|------|--------|------|
-| **Array - Two Sum Variants** | 1 | 1 | - |
-| **Array - Subarrays** | 1 | - | - |
-| **Array - Stock Trading** | 1 | - | - |
-| **Array - Duplicates** | 1 | - | - |
-| **Strings** | - | - | - |
+# Compile and run (once implemented)
+g++ -std=c++11 -o solution solution.cpp
+./solution
+```
 
 ---
 
-## 💡 Tips for Interview Success
+## 📊 Current Progress
 
-### Before You Code
-- [ ] Ask clarifying questions
-- [ ] Discuss edge cases
-- [ ] Mention your approach & complexity
-- [ ] Walk through an example
+### Python Array Section
+| Topic | Files | Status |
+|-------|-------|--------|
+| **Starting Algorithms** | 6 files | ✅ Complete |
+| **Searching Algorithms** | 2 files | ✅ Complete |
+| **Coding Patterns** | 1 file | 🔄 In Progress |
+| **LeetCode Easy** | 4 files | ✅ Complete |
+| **LeetCode Medium** | 1 file | ✅ Complete |
+| **Strings** | 0 files | 📋 Planned |
 
-### While Coding
-- [ ] Write clean, readable code
-- [ ] Add comments for complex logic
-- [ ] Test with edge cases
-- [ ] Optimize if time permits
+### C++ Section
+| Topic | Status |
+|-------|--------|
+| **All Implementations** | 📋 Planned |
 
-### Common Pitfalls to Avoid
-- ❌ Not handling edge cases (empty array, single element, duplicates)
-- ❌ Off-by-one errors in loops
-- ❌ Forgetting about integer overflow
-- ❌ Not considering optimal solution before coding
-- ❌ Poor variable naming
+---
+
+## 💡 Quick Reference
+
+### Big O Complexity Cheat Sheet
+
+```
+O(1)       - Constant time      (hash map lookup)
+O(log n)   - Logarithmic        (binary search)
+O(n)       - Linear             (simple loop)
+O(n²)      - Quadratic          (nested loops)
+O(n log n) - Linearithmic       (efficient sorting)
+O(2ⁿ)      - Exponential        (recursion without memoization)
+O(n!)      - Factorial          (permutations)
+```
+
+### Common Array Patterns
+
+| Pattern | Example Problem | Use Case |
+|---------|-----------------|----------|
+| **Two Pointer** | Two Sum, 3Sum | Finding pairs/triplets |
+| **Sliding Window** | Max length substring | Contiguous subarrays |
+| **Prefix Sum** | Product of Array Except Self | Efficient calculations |
+| **Kadane's Algorithm** | Maximum Subarray | Max/min subarray sum |
+| **Binary Search** | Search in sorted array | Fast searching |
+
+---
+
+## 📈 Development Status
+
+### Current Phase: 🔄 **Active Development**
+
+This repository is **actively being built** and regularly updated. You may encounter:
+
+✨ **What to Expect:**
+- ✅ Well-documented Python implementations
+- ✅ Comments explaining algorithm logic
+- ✅ Time & Space complexity analysis
+- ✅ Real LeetCode interview problems
+- ✅ Working code examples
+
+⚠️ **What's Still Changing:**
+- 🔨 C++ implementations (planned)
+- 📝 Reorganizing content for clarity
+- ➕ Adding more LeetCode problems
+- 🐛 Fixing any identified issues
+- 📖 Expanding explanations
+
+**Note:** This is intentional! Part of learning is revisiting and improving solutions. Feel free to watch, star, and check back often! 🌟
+
+---
+
+## 🎯 Interview Preparation
+
+This repository covers essential patterns for coding interviews:
+
+| Pattern | Topics Covered | Difficulty |
+|---------|---|-----------|
+| **Arrays** | Two Sum, Subarray, Stock Trading | Easy-Medium |
+| **Searching** | Linear & Binary Search | Easy |
+| **Two Pointers** | Partitioning, Sum problems | Medium |
+| **Algorithms** | Sorting, Searching, Rotating | Easy-Medium |
 
 ---
 
 ## 🤝 Contributing
 
-We'd love to see this repository grow! Here's how you can contribute:
+This is a personal learning project, but contributions and suggestions are welcome!
 
-### Adding New Solutions
-1. Create a well-commented solution
-2. Follow the existing naming convention
-3. Include time and space complexity
-4. Add test cases if applicable
-5. Update this README
+### How to Contribute
 
-### Improvement Ideas
-- [ ] Add more LeetCode problems
-- [ ] Create visual explanations
-- [ ] Add practice problems
-- [ ] Explain advanced techniques
-- [ ] Create difficulty progressions
+1. **Report Issues** - Found a bug or unclear explanation? [Open an issue](https://github.com/Akshay010706/learningDSA/issues)
+2. **Suggest Improvements** - Have better solutions? Create a discussion
+3. **Add Solutions** - Contribute new problems or C++ implementations
 
----
+### Contribution Guidelines
 
-## 📈 Progress Tracker
-
-Track your learning journey:
-
-```
-[ ] Foundation Algorithms (StartingAlgorithm/)
-  [x] Kadane's Algorithm
-  [x] Two Sum & Three Sum
-  [x] Dutch National Flag
-  [x] Juggling Algorithm
-  [x] Moore's Voting Algorithm
-  
-[ ] Array Patterns (leetcode8pattern/)
-  [x] Two Pointer Technique
-  
-[ ] Easy LeetCode Problems (leetcodeimp/Easy/)
-  [x] Two Sum
-  [x] Contains Duplicate
-  [x] Maximum Subarray
-  [x] Best Time to Buy and Sell Stock
-  
-[ ] Medium LeetCode Problems (leetcodeimp/Medium/)
-  [x] Product of Array Except Self
-  
-[ ] Hard LeetCode Problems (leetcodeimp/hard/)
-  [ ] (Coming Soon)
-  
-[ ] String Algorithms (Strings/)
-  [x] KMP Algorithm
-  [x] Valid Anagram
-```
+When adding new solutions:
+- ✅ Include clear, well-commented code
+- ✅ Specify Time and Space complexity
+- ✅ Provide example test cases
+- ✅ Update this README
+- ✅ Follow existing code style
 
 ---
 
-## 🎓 Learning Milestones
+## 📚 Learning Resources
 
-- 🟢 **Beginner**: Complete all starting algorithms
-- 🟡 **Intermediate**: Solve all easy LeetCode problems
-- 🟠 **Advanced**: Master all medium problems
-- 🔴 **Expert**: Conquer hard problems with optimal solutions
+### Free Online Platforms
+- **LeetCode** - https://leetcode.com (Interview-style problems)
+- **HackerRank** - https://www.hackerrank.com (Algorithm practice)
+- **GeeksforGeeks** - https://www.geeksforgeeks.org (Theory + implementations)
+- **InterviewBit** - https://www.interviewbit.com (Structured learning paths)
+- **CodeSignal** - https://codesignal.com (Gamified challenges)
+
+### Recommended Books
+- **Introduction to Algorithms** (CLRS) - The classic reference
+- **Cracking the Coding Interview** - Interview-focused
+- **Algorithm Design Manual** - Problem-solving strategies
+- **Data Structures and Algorithms Made Easy** - Simplified explanations
+
+### YouTube Channels
+- **Abdul Bari** - Excellent DSA explanations
+- **William Fiset** - Graph algorithms & visualizations
+- **Kunal Kushwaha** - Complete DSA course
+- **CodeHelp** - Hindi & English tutorials
 
 ---
 
-## 📞 Questions?
+## 📞 Support & Questions
 
-If you have questions about any algorithm or problem:
+### Having Trouble?
 
-1. Check the code comments and examples
-2. Review the complexity analysis
-3. Try solving the problem yourself first
-4. Look at alternative approaches
+1. **Check existing solutions** - Browse the relevant folder
+2. **Read the comments** - Code is well-documented
+3. **Trace through examples** - Step through the algorithm
+4. **Try implementing first** - Don't just copy-paste
+5. **Open an issue** - If still stuck
+
+### Learning Tips
+
+💡 **For Best Results:**
+- 👨‍💻 Code along - don't just read
+- 🧪 Modify and experiment with solutions
+- 📝 Write your own comments
+- 🔄 Revisit problems after a few days
+- 🏆 Track your progress!
 
 ---
 
 ## 📄 License
 
-This repository is open source under the MIT License - feel free to use it for learning!
+This repository is open source under the **MIT License** - feel free to use it for learning and personal projects.
 
 ---
 
 ## 🌟 Show Your Support
 
-If this repository helped you learn DSA:
-- ⭐ Give it a star
-- 📢 Share with others
-- 🔄 Contribute solutions
-- 💬 Provide feedback
+If this repository helped you with your DSA journey:
+
+- ⭐ **Star the repository** - helps others discover it
+- 📢 **Share with friends** - spread the knowledge
+- 🔄 **Contribute solutions** - help the community
+- 💬 **Provide feedback** - help improve the project
 
 ---
 
 <div align="center">
 
-**Happy Learning! Keep Coding! 🚀**
+## 🚀 Ready to Master DSA?
 
-*Last Updated: 2024*
+**Pick a topic from the repository structure and start learning!**
+
+### Remember:
+```
+"The only way to learn a new programming language is by writing programs in it."
+                                                          — Dennis Ritchie
+
+Consistency beats intensity. Code a little every day! 💪
+```
+
+**Happy Learning! Keep Coding! 📚💻**
+
+*Last Updated: June 2026 | Actively Maintained | Open to Contributions*
+
+[![Python](https://img.shields.io/badge/Made%20with-Python%20%26%20C%2B%2B-blue?style=flat-square)](https://github.com/Akshay010706/learningDSA)
+[![GitHub](https://img.shields.io/badge/GitHub-Akshay010706-success?style=flat-square&logo=github)](https://github.com/Akshay010706)
 
 </div>
