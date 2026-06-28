@@ -10,6 +10,7 @@ int add(int a, int b) {
     return a + b;
 }
 
+//a and b becomes pointer it stores the address of where the variable is stores
 double add(double a, double b) {
     return a + b;
 }

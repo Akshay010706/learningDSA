@@ -5,8 +5,13 @@ using namespace std;
 int main() {
     // Basic array operations
     vector<int> arr = {1, 2, 3, 4, 5};
+
+    //s stores number of element in the array
+    int s = sizeof(arr)/sizeof(arr[0]);
+    //or
+    //int s = sizeof(arr)/sizeof(arr[int]);
     
-    // Print array
+    // Print array using foreach loop
     cout << "Array elements: ";
     for (int x : arr) {
         cout << x << " ";
