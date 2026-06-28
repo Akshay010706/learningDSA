@@ -2,6 +2,8 @@
 
 using namespace std;
 
+//void hlo();
+
 // Function declaration
 void greet(string name) {
     cout << "Hello " << name << endl;
@@ -18,3 +20,9 @@ int main() {
     
     return 0;
 }
+
+// you can also declare a functiuon in starting and define in after main function int main()
+
+//void hlo(){
+//cout<<"hii";
+//}
